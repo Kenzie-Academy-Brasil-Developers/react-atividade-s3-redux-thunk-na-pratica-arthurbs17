@@ -1,14 +1,16 @@
-import "./App.css";
 import Display from "./components/Display";
 import FormInput from "./components/FormInput";
+import GlobalStyle from "./styles/global";
+import { Container } from "./styles/styles";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <GlobalStyle />
+      <Container>
         <Display />
         <FormInput />
-      </header>
+      </Container>
     </div>
   );
 }

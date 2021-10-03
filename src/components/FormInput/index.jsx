@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addCommentThunk } from "../../store/modules/user/thunks";
+import { Button, Container, Input } from "./styles";
 
 const FormInput = () => {
   const [userInput, setUserInput] = useState("");
@@ -10,10 +11,10 @@ const FormInput = () => {
     dispatch(addCommentThunk(userInput));
   };
   return (
-    <div>
-      <input onChange={(e) => setUserInput(e.target.value)} />
-      <button onClick={handleForm}>Enviar</button>
-    </div>
+    <Container>
+      <Input onChange={(e) => setUserInput(e.target.value)} />
+      <Button onClick={handleForm}>Enviar</Button>
+    </Container>
   );
 };
 
